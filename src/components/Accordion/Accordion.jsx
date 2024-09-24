@@ -37,4 +37,4 @@ export default function Accordion({ children, className }) {
 
 Accordion.Item = AccordionItem;
 Accordion.Title = AccordionTitle;
-Accordion.Content = AccordionContent;
+Accordion.Content = AccordionContent; 
