@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function SearchableList({ items }) {
+export default function SearchableList({ items, children }) {
     const [searchTerm, setSearchTerms] = useState('');
 
     const searchResults = items.filter(item => 
@@ -16,7 +16,8 @@ export default function SearchableList({ items }) {
             <ul>
                 {searchResults.map((item, index) => (
                     <li key={index}>
-                        {item.toString()}
+                        {children(item)}
+                        {/* {item.toString()} */}
                     </li>
                 ))}
             </ul>
